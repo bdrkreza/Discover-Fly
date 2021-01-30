@@ -92,7 +92,10 @@ a.active {
 
 .booking-form .calculations p {
     font-weight: 500;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
+}
+.booking-form .calculations .right p {
+    text-align: right;
 }
 
 .booking-form input {
