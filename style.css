@@ -1,7 +1,3 @@
-#transaction-area {
-    display: none;
-}
-
 * {
     padding: 0;
     margin: 0;
@@ -140,18 +136,34 @@ a.active {
     background-color: #3352F2;
 }
 
-.amount {
-    display: flex;
-    justify-content: space-between;
+
+/* booking Button section style */
+
+#transaction-area {
+    display: none;
 }
 
-.booking-table {
-    background-color: white;
-    border-radius: 10px;
+.title {
+    color: white;
 }
 
-
-/* .table {
-    border: solid black;
+.ticket {
+    border-collapse: collapse;
     width: 100%;
-} */
+}
+
+.ticket th,
+td {
+    text-align: left;
+    padding: 8px;
+}
+
+.ticket tr:nth-child(even) {
+    background-color: #f2f2f2
+}
+
+.ticket th {
+    background-color: #4CAF50;
+    color: white;
+    text-align: bold;
+}

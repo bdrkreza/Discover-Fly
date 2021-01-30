@@ -25,8 +25,6 @@ function callIdNameSet(id, variable) {
     document.getElementById(id).innerText = variable;
 }
 
-
-
 // calculation function 
 function updatePrice() {
     let firstClassTicket = getInputValue("classticketcount");
@@ -48,7 +46,9 @@ function updatePrice() {
     callIdNameSet("first-class-price", firstClassPrice);
     callIdNameSet("economy-ticket-number", economyTicket)
     callIdNameSet("economy-ticket-price", economyTicketPrice)
-    callIdNameSet("total-Price", tax);
+    callIdNameSet("tax-price", tax);
+    callIdNameSet("total-price", totalPrice);
+
 
 }
 

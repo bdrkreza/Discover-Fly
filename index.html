@@ -109,45 +109,37 @@
             </p>
         </div>
     </main>
+    <!-- booking Button Section -->
+    <section id="transaction-area">
+        <h2 class="title">You are buying tickets</h2>
 
-    <!-- booking button section -->
-    <section id="transaction-area" class="booking-table">
-        <div class="">
-            <div>
-                <h1>discover</h1>
-                <br />
-                <h3>You are buying these tickets</h3>
-            </div>
-        </div>
-        <div>
-            <table class="table">
-                <thead>
-                    <tr>
-                        <th scope="col">Ticket type</th>
-                        <th scope="col">Total Ticket</th>
-                        <th scope="col">Price</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <th scope="row">First Class</th>
-                        <td id="firstclassnumber"></td>
-                        <td id="first-class-price"></td>
-                    </tr>
-                    <tr>
-                        <th scope="row">Economy</th>
-                        <td id="economy-ticket-number"></td>
-                        <td id="economy-ticket-price"></td>
-                    </tr>
-
-                    <tr>
-                        <th scope="row">Tax</th>
-                        <td>10%</td>
-                        <td>$<span id="total-Price"></span></td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
+        <table class="ticket">
+            <tr>
+                <th>Ticket Name</th>
+                <th>Number Of Seat</th>
+                <th>Price</th>
+            </tr>
+            <tr>
+                <td>First Class</td>
+                <td id="firstclassnumber"></td>
+                <td>$<span id="first-class-price">00</span></td>
+            </tr>
+            <tr>
+                <td>Eoconomy</td>
+                <td id="economy-ticket-number"></td>
+                <td>$<span id="economy-ticket-price">00</span></td>
+            </tr>
+            <tr>
+                <td>Vat</td>
+                <td>10%</td>
+                <td>$<span id="tax-price">00</span></td>
+            </tr>
+            <tr>
+                <td>Total Price</td>
+                <td></td>
+                <td>$<span id="total-price">00</span></td>
+            </tr>
+        </table>
     </section>
 
     <!--javascript-->
