@@ -14,33 +14,48 @@ function handleFlight(flight, isIncrease) {
     updatePrice()
 };
 
-
 // Value Input Set Function
 function getInputValue(Id) {
     const ticketInput = parseInt(document.getElementById(Id).value);
-    // const ticketCount = parseInt(ticketInput.value);
     return ticketInput;
 }
 
-
-//call id name Set Function
-function callIdNameSet(id, text) {
-    document.getElementById(id).innerText = text;
+// call id name Set Function
+function callIdNameSet(id, variable) {
+    document.getElementById(id).innerText = variable;
 }
 
 
-//function 
+
+// calculation function 
 function updatePrice() {
     let firstClassTicket = getInputValue("classticketcount");
     let economyTicket = getInputValue("economyticketcount");
+
     let firstClassPrice = 150 * firstClassTicket;
     let economyTicketPrice = 100 * economyTicket;
-
     let subTotalPrice = firstClassPrice + economyTicketPrice;
     let tax = subTotalPrice * 0.1;
     let totalPrice = subTotalPrice + tax;
 
+    // Ticket Price input function
     callIdNameSet("sub-totalprice", subTotalPrice);
     callIdNameSet("tax", tax);
     callIdNameSet("totalprice", totalPrice);
+
+    // Table Booking ticket value
+    callIdNameSet("firstclassnumber", firstClassTicket);
+    callIdNameSet("first-class-price", firstClassPrice);
+    callIdNameSet("economy-ticket-number", economyTicket)
+    callIdNameSet("economy-ticket-price", economyTicketPrice)
+    callIdNameSet("total-Price", tax);
+
 }
+
+// Booking Button function
+document.getElementById("bookingBtn").addEventListener("click", function() {
+    const loginArea = document.getElementById("booking-area");
+    loginArea.style.display = "none";
+    const transactionArea = document.getElementById("transaction-area");
+    transactionArea.style.display = "block";
+})
